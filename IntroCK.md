@@ -41,4 +41,12 @@
 * `docker image rm repo/name:tag`
 * `docker container run -d -p 9000:9000 repo/name:tag`
 * `docker container ls`
-* `docker contaner stop $name`
+* `docker container stop $name`
+
+# Docker volume basics
+* `docker volume create $name`
+* `docker volume ls`
+* `docker volume rm $name`
+* `docker run -d --name $myContainer --mount source=$name,target=$pathInContainer name:tag`
+* `docker run -d --name $myContainer --mount source=$name,target=$pathInContainer,readonly name:tag`
+* `docker run -d -v $name:$pathInContainer name:tag`
